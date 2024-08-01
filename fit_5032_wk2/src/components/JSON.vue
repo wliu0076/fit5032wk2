@@ -98,14 +98,20 @@
     </section>
 
     <section class="lab-section">
-      <h2>Attribute, Class and Style Binding with <code>v-bind</code></h2>
+  <h2>Attribute, Class and Style Binding with <code>v-bind</code></h2>
   <p>Highlighting Specific Authors:</p>
   <ul>
-    <li v-for="author in authors" :key="author.id" :style="{ color: author.name === 'George Orwell' ? 'blue' : 'black' }">
+    <li v-for="author in authors" :key="author.id"
+        :style="{
+          color: author.name === 'George Orwell' ? 'blue' : 'black',
+          fontWeight: author.name === 'George Orwell' ? 'bold' : 'normal',
+          fontSize: author.name === 'George Orwell' ? '1.2em' : '1em'
+        }">
       ID: {{ author.id }}, Name: {{ author.name }}
     </li>
   </ul>
-    </section>
+</section>
+
     <!-- <p>{{modernAuthors}}</p> -->
   </div>
 </template>
