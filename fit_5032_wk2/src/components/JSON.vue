@@ -78,12 +78,14 @@
       </ul>
 
       <h3 class="activity-title">Working with Arrays in Objects</h3>
-      <p>We operate in:</p>
-      <ul>
-        <li v-for="country in bookstores.locations" :key="country">
-          <span class="answer">{{ country }}</span>
-        </li>
-      </ul>
+<p>We operate in:</p>
+<ul>
+  <li v-for="country in bookstores.countries" :key="country">
+    <span class="answer">{{ country }}</span>
+  </li>
+</ul>
+<p><span class="answer">{{ bookstores.topSeller }}</span></p>
+
       <p>Our #1 seller:</p>
       <p><span class="answer">To Kill a Mockingbird</span></p>
     </section>
@@ -101,7 +103,6 @@
       <!-- Dynamic class binding based on condition -->
     </section>
     <!-- <p>{{modernAuthors}}</p> -->
-    <p>{{allFamousWorks}}</p>
   </div>
 </template>
 
